@@ -12,6 +12,7 @@
 		C60793121C9A68E700E67BDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60793101C9A68E700E67BDD /* Main.storyboard */; };
 		C60793141C9A68E700E67BDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60793131C9A68E700E67BDD /* Assets.xcassets */; };
 		C60793171C9A68E700E67BDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60793151C9A68E700E67BDD /* LaunchScreen.storyboard */; };
+		C63F8FFA1CAF56D1007F52C7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63F8FF91CAF56D1007F52C7 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		C60793131C9A68E700E67BDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C60793161C9A68E700E67BDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C60793181C9A68E700E67BDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C63F8FF71CAF56D0007F52C7 /* BartDepart-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BartDepart-Bridging-Header.h"; sourceTree = "<group>"; };
+		C63F8FF81CAF56D1007F52C7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		C63F8FF91CAF56D1007F52C7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,10 @@
 				C60793101C9A68E700E67BDD /* Main.storyboard */,
 				C60793131C9A68E700E67BDD /* Assets.xcassets */,
 				C60793151C9A68E700E67BDD /* LaunchScreen.storyboard */,
+				C63F8FF81CAF56D1007F52C7 /* SWRevealViewController.h */,
+				C63F8FF91CAF56D1007F52C7 /* SWRevealViewController.m */,
 				C60793181C9A68E700E67BDD /* Info.plist */,
+				C63F8FF71CAF56D0007F52C7 /* BartDepart-Bridging-Header.h */,
 			);
 			path = BartDepart;
 			sourceTree = "<group>";
@@ -137,6 +144,7 @@
 			files = (
 				C607930F1C9A68E700E67BDD /* ViewController.swift in Sources */,
 				C607930D1C9A68E700E67BDD /* AppDelegate.swift in Sources */,
+				C63F8FFA1CAF56D1007F52C7 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,10 +255,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BartDepart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GroverTech.BartDepart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BartDepart/BartDepart-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -258,10 +269,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BartDepart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GroverTech.BartDepart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BartDepart/BartDepart-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -284,6 +297,7 @@
 				C607931D1C9A68E700E67BDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
