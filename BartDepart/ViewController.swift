@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         open.target = self.revealViewController()
         open.action = Selector("revealToggle:")
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
 
     override func didReceiveMemoryWarning() {
