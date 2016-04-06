@@ -13,6 +13,7 @@ class backTableVC:UITableViewController {
 
     override func viewDidLoad() {
         tableArray = ["Overview", "Real Time Departures", "Route Info"]
+        //tableArray = ["Overview", "Real Time Departures", "Service Advisory"]
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(tableArray[indexPath.row], forIndexPath: indexPath) as UITableViewCell
