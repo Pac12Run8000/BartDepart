@@ -48,6 +48,28 @@
                                     <segue destination="SgN-aW-jRM" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="sFB-PZ-Yrb"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Service Advisory" id="rgh-7u-4LU">
+                                <rect key="frame" x="0.0" y="160" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rgh-7u-4LU" id="Sbz-iX-t37">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="che-cT-glD" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="niJ-QV-OBp"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Stations" id="iOa-nn-KUQ">
+                                <rect key="frame" x="0.0" y="204" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iOa-nn-KUQ" id="e9z-a4-SD1">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="YgU-Pw-xf8" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="zsH-fN-N1g"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="nFA-gJ-3Ti" id="xXE-OT-qgF"/>
@@ -58,6 +80,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcc-3L-Gf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1173" y="-920"/>
+        </scene>
+        <!--Advisory-->
+        <scene sceneID="uNq-oQ-RV0">
+            <objects>
+                <viewController id="che-cT-glD" customClass="sAdvisory" customModule="BartDepart" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dci-iC-YmJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="WXZ-gg-3De"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mGq-fu-kKf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="advisory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOz-g0-LPR">
+                                <rect key="frame" x="268" y="290" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fOz-g0-LPR" firstAttribute="centerY" secondItem="mGq-fu-kKf" secondAttribute="centerY" id="7M5-E7-J2m"/>
+                            <constraint firstItem="fOz-g0-LPR" firstAttribute="centerX" secondItem="mGq-fu-kKf" secondAttribute="centerX" id="wbT-vt-fga"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="klv-e0-EUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-442" y="-920"/>
         </scene>
         <!--Route Info-->
         <scene sceneID="Rmu-oE-cxz">
@@ -75,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWE-5X-5NT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-319" y="-1259"/>
+            <point key="canvasLocation" x="860" y="-1251"/>
         </scene>
         <!--Real Time Departures-->
         <scene sceneID="sKR-7Y-2N7">
@@ -108,7 +160,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pr0-Zd-Bhm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-319" y="-601"/>
+            <point key="canvasLocation" x="860" y="-607"/>
+        </scene>
+        <!--Stations-->
+        <scene sceneID="aHT-9j-a6S">
+            <objects>
+                <viewController id="YgU-Pw-xf8" customClass="Stations" customModule="BartDepart" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FDA-VV-RPZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="N6n-Tm-QpT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tmt-Wq-XAB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKS-r1-DtZ">
+                                <rect key="frame" x="269" y="290" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GKS-r1-DtZ" firstAttribute="centerY" secondItem="Tmt-Wq-XAB" secondAttribute="centerY" id="k6Q-OE-Twu"/>
+                            <constraint firstItem="GKS-r1-DtZ" firstAttribute="centerX" secondItem="Tmt-Wq-XAB" secondAttribute="centerX" id="ueS-BJ-TqD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDA-zi-9Wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-453" y="-256"/>
         </scene>
         <!--Overview-->
         <scene sceneID="5CE-CN-di8">

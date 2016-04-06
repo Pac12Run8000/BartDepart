@@ -12,7 +12,7 @@ class backTableVC:UITableViewController {
     var tableArray = [String]()
 
     override func viewDidLoad() {
-        tableArray = ["Overview", "Real Time Departures", "Route Info"]
+        tableArray = ["Overview", "Real Time Departures", "Route Info", "Service Advisory", "Stations"]
         //tableArray = ["Overview", "Real Time Departures", "Service Advisory"]
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

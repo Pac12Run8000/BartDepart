@@ -17,6 +17,8 @@
 		C63F8FFE1CB0DBD8007F52C7 /* overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63F8FFD1CB0DBD8007F52C7 /* overview.swift */; };
 		C63F90001CB0DD1A007F52C7 /* realTimeDepartures.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63F8FFF1CB0DD1A007F52C7 /* realTimeDepartures.swift */; };
 		C63F90021CB0DDDB007F52C7 /* routeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63F90011CB0DDDB007F52C7 /* routeInfo.swift */; };
+		C63F90041CB5A661007F52C7 /* sAdvisory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63F90031CB5A661007F52C7 /* sAdvisory.swift */; };
+		C63F90061CB5A6F0007F52C7 /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63F90051CB5A6F0007F52C7 /* Stations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		C63F8FFD1CB0DBD8007F52C7 /* overview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = overview.swift; sourceTree = "<group>"; };
 		C63F8FFF1CB0DD1A007F52C7 /* realTimeDepartures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = realTimeDepartures.swift; sourceTree = "<group>"; };
 		C63F90011CB0DDDB007F52C7 /* routeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = routeInfo.swift; sourceTree = "<group>"; };
+		C63F90031CB5A661007F52C7 /* sAdvisory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sAdvisory.swift; sourceTree = "<group>"; };
+		C63F90051CB5A6F0007F52C7 /* Stations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				C607930C1C9A68E700E67BDD /* AppDelegate.swift */,
 				C607930E1C9A68E700E67BDD /* ViewController.swift */,
 				C60793101C9A68E700E67BDD /* Main.storyboard */,
+				C63F90051CB5A6F0007F52C7 /* Stations.swift */,
+				C63F90031CB5A661007F52C7 /* sAdvisory.swift */,
 				C63F8FFD1CB0DBD8007F52C7 /* overview.swift */,
 				C63F8FFB1CB0C8C8007F52C7 /* backTableVC.swift */,
 				C63F90011CB0DDDB007F52C7 /* routeInfo.swift */,
@@ -159,7 +165,9 @@
 				C607930D1C9A68E700E67BDD /* AppDelegate.swift in Sources */,
 				C63F90001CB0DD1A007F52C7 /* realTimeDepartures.swift in Sources */,
 				C63F8FFC1CB0C8C8007F52C7 /* backTableVC.swift in Sources */,
+				C63F90061CB5A6F0007F52C7 /* Stations.swift in Sources */,
 				C63F90021CB0DDDB007F52C7 /* routeInfo.swift in Sources */,
+				C63F90041CB5A661007F52C7 /* sAdvisory.swift in Sources */,
 				C63F8FFA1CAF56D1007F52C7 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
