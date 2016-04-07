@@ -27,7 +27,7 @@ class realTimeDepartures : UIViewController, NSXMLParserDelegate {
         
         self.beginParsing()
     }
-    /*************************/
+    /********* Parser functionality ****************/
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         element = elementName
         if (elementName as NSString).isEqualToString("item")
