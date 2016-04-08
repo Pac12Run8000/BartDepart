@@ -16,8 +16,8 @@ class realTimeDepartures : UIViewController, NSXMLParserDelegate {
     var posts = NSMutableArray()
     var elements = NSMutableDictionary()
     var element = NSString()
-    var title1 = NSMutableString()
-    var date = NSMutableString()
+    var name = NSMutableString()
+    var abbr = NSMutableString()
     
     
     override func viewDidLoad() {
@@ -30,33 +30,33 @@ class realTimeDepartures : UIViewController, NSXMLParserDelegate {
     /********* Parser functionality ****************/
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         element = elementName
-        if (elementName as NSString).isEqualToString("item")
+        if (elementName as NSString).isEqualToString("station")
         {
             elements = NSMutableDictionary()
             elements = [:]
-            title1 = NSMutableString()
-            title1 = ""
-            date = NSMutableString()
-            date = ""
+            name = NSMutableString()
+            name = ""
+            abbr = NSMutableString()
+            abbr = ""
         }
     }
    
     func parser(parser: NSXMLParser, foundCharacters string: String)
     {
-        if element.isEqualToString("title") {
-            title1.appendString(string)
-        } else if element.isEqualToString("pubDate") {
-            date.appendString(string)
+        if element.isEqualToString("name") {
+            name.appendString(string)
+        } else if element.isEqualToString("abbr") {
+            abbr.appendString(string)
         }
     }
     
     func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        if (elementName as NSString).isEqualToString("item") {
-            if !title1.isEqual(nil) {
-                elements.setObject(title1, forKey: "title")
+        if (elementName as NSString).isEqualToString("station") {
+            if !name.isEqual(nil) {
+                elements.setObject(name, forKey: "name")
             }
-            if !date.isEqual(nil) {
-                elements.setObject(date, forKey: "date")
+            if !abbr.isEqual(nil) {
+                elements.setObject(abbr, forKey: "abbr")
             }
             posts.addObject(elements)
         }
@@ -76,8 +76,8 @@ class realTimeDepartures : UIViewController, NSXMLParserDelegate {
             cell = NSBundle.mainBundle().loadNibNamed("Cell", owner: self, options: nil)[0] as! UITableViewCell;
         }
         
-        cell.textLabel?.text = posts.objectAtIndex(indexPath.row).valueForKey("title") as? String
-        cell.detailTextLabel?.text = posts.objectAtIndex(indexPath.row).valueForKey("date") as? String
+        cell.textLabel?.text = posts.objectAtIndex(indexPath.row).valueForKey("name") as? String
+        cell.detailTextLabel?.text = posts.objectAtIndex(indexPath.row).valueForKey("abbr") as? String
         
         return cell as UITableViewCell
     }
@@ -85,7 +85,7 @@ class realTimeDepartures : UIViewController, NSXMLParserDelegate {
     func beginParsing()
     {
         posts = []
-        parser = NSXMLParser(contentsOfURL:(NSURL(string:"http://images.apple.com/main/rss/hotnews/hotnews.rss"))!)!
+        parser = NSXMLParser(contentsOfURL:(NSURL(string:"http://api.bart.gov/api/etd.aspx?cmd=etd&orig=ftvl&key=MW9S-E7SL-26DU-VV8V"))!)!
         parser.delegate = self
         parser.parse()
         tbData!.reloadData()
